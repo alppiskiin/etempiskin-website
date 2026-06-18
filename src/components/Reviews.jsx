@@ -120,7 +120,7 @@ export default function Reviews() {
           </div>
 
           <div ref={rGrid} className="reviews-grid scrollable-reviews">
-            {list.map((r) => <ReviewCard r={r} key={r.id} />)}
+            {list.map((r, i) => <ReviewCard r={r} key={i} />)}
           </div>
 
           <div ref={rForm} className="reviews-form-wrapper reveal-up">

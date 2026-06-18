@@ -14,8 +14,9 @@ function nextDays(count = 14) {
     const d = new Date(today);
     d.setDate(today.getDate() + i);
     if (d.getDay() === 0) continue;
+    const iso = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
     days.push({
-      iso: d.toISOString().slice(0, 10),
+      iso,
       label: `${dn[d.getDay()]}, ${d.getDate()} ${mn[d.getMonth()]}`,
       isSaturday: d.getDay() === 6
     });
