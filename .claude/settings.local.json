@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:elegant-dolphin-0e7bdb.netlify.app)"
+    ]
+  }
+}
