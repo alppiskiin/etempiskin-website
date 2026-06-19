@@ -49,7 +49,14 @@ export default function Navbar() {
           </Link>
 
           <div className={`navbar__menu ${open ? 'open' : ''}`}>
-            <a href={link('hero')} className={`navbar__link ${active === 'hero' ? 'active' : ''}`} onClick={close}>Ana Sayfa</a>
+            <a href={link('hero')} className={`navbar__link ${active === 'hero' ? 'active' : ''}`} onClick={(e) => {
+              if (onHomePage) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                history.replaceState(null, '', window.location.pathname + window.location.search);
+              }
+              close();
+            }}>Ana Sayfa</a>
             <a href={link('hakkimda')} className={`navbar__link ${active === 'hakkimda' ? 'active' : ''}`} onClick={close}>Hakkımda</a>
             <a href={link('hizmetler')} className={`navbar__link ${active === 'hizmetler' ? 'active' : ''}`} onClick={close}>Hizmetler</a>
             <a href={link('sss')} className={`navbar__link ${active === 'sss' ? 'active' : ''}`} onClick={close}>Bilgi Köşesi</a>
