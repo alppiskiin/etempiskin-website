@@ -7,6 +7,16 @@ export default function Hero() {
 
   return (
     <section id="hero" className="hero">
+      <video
+        className="hero__video-bg"
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="/assets/hero.jpeg"
+      >
+        <source src="/assets/hero.mp4" type="video/mp4" />
+      </video>
       <div className="hero__overlay"></div>
       <div className="container hero__inner">
         <div ref={rContent} className="hero__content reveal-right">
@@ -42,7 +52,7 @@ export default function Hero() {
 
         <div ref={rImage} className="hero__image reveal-left">
           <div className="hero__image-wrapper">
-            <img src="/assets/hero.jpeg" alt="Prof. Dr. İbrahim Etem Pişkin" loading="eager" style={{ width: '100%', height: 'auto', borderRadius: '16px' }} />
+            <img src="/assets/hero.jpeg" alt="Prof. Dr. İbrahim Etem Pişkin" loading="eager" style={{ width: '100%', height: 'auto', borderRadius: '20px', border: '6px solid rgba(255,255,255,0.9)', boxShadow: '0 30px 60px rgba(15,23,42,0.28)' }} />
             <div className="hero__image-glow"></div>
           </div>
         </div>
