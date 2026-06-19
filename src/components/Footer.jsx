@@ -45,7 +45,7 @@ export default function Footer() {
             <h4>İletişim</h4>
             <p>📍 <a href="https://maps.app.goo.gl/ar7Ku4UyF3Zojt2Z9" target="_blank" rel="noopener noreferrer">Zonguldak Merkez</a></p>
             <p>📞 <a href="tel:+908508118176">0850 811 81 76</a></p>
-            <p>💬 <a href="https://wa.me/905387850878" target="_blank" rel="noopener noreferrer">0538 785 08 78</a></p>
+            <p>💬 <a href="https://wa.me/905469151000" target="_blank" rel="noopener noreferrer">0546 915 10 00</a></p>
           </div>
         </div>
 
