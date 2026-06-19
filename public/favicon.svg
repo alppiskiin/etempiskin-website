@@ -1,12 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" rx="12" fill="#2563eb"/>
-  <!-- stethoscope arc -->
-  <g stroke="white" stroke-width="2.8" stroke-linecap="round" fill="none">
-    <path d="M14 12 C14 19 10 21 10 27 C10 31 13 34 17 34 C21 34 24 31 24 27"/>
-    <circle cx="14" cy="11" r="2.8"/>
-    <path d="M24 27 C24 23 29 23 29 19"/>
-    <circle cx="29" cy="17.5" r="2.2" fill="white" stroke="none"/>
-  </g>
-  <!-- İEP text -->
-  <text x="38" y="38" font-family="Georgia,serif" font-size="22" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">İEP</text>
+  <text x="32" y="34" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle" letter-spacing="-1.5">İEP</text>
 </svg>
