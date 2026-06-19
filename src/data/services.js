@@ -9,7 +9,8 @@ export const services = [
     title: 'Aşı Uygulamaları',
     desc: 'Sağlık Bakanlığı aşı takvimine uygun olarak tüm çocukluk çağı aşılarını uyguluyoruz. Aşı takvimi danışmanlığı ve takibi hizmetimiz mevcuttur.',
     details: "Aşılama, çocukları hayatı tehdit eden birçok bulaşıcı hastalıktan korumanın en güvenli ve etkili yoludur. Kliniğimizde Sağlık Bakanlığı'nın Ulusal Aşı Takvimi'nde yer alan tüm aşılar (Hepatit B, Verem, Karma aşılar, Kızamık vb.) titizlikle uygulanmaktadır. Bunun yanı sıra, devlet takviminde yer almayan ancak Dünya Sağlık Örgütü ve tıp otoriteleri tarafından şiddetle önerilen Rotavirüs (ishal) aşısı ve Meningokok (menenjit) aşıları hakkında aileler bilgilendirilir ve uygun aylarda uygulamaları yapılır. Aşı sonrası olası yan etkiler ve ateş takibi konusunda ailelere detaylı eğitim verilir.",
-    iconPaths: ['M12 2L12 22', 'M17 7L12 2L7 7']
+    iconPaths: ['M12 2L12 22', 'M17 7L12 2L7 7'],
+    iconCircles: [{ cx: 12, cy: 14, r: 4 }]
   },
   {
     title: 'Yenidoğan Muayenesi',
@@ -21,7 +22,8 @@ export const services = [
     title: 'Beslenme Danışmanlığı',
     desc: 'Anne sütü danışmanlığı, ek gıdaya geçiş, alerjik besinler ve çocuğunuzun yaşına uygun beslenme planları konusunda rehberlik ediyoruz.',
     details: 'Çocukların sağlıklı büyümesi ve bağışıklık sistemlerinin güçlü olması için yaşa uygun doğru beslenme hayati önem taşır. İlk 6 ay sadece anne sütü alımının desteklenmesi, annelerin emzirme sürecinde yaşadığı sorunların çözülmesi kliniğimizin önceliklerindendir. 6. aydan sonra ek gıdaya geçiş sürecinde; hangi besinlerin nasıl hazırlanacağı, besin alerjisi riskleri, parmak beslenme (BLW) yöntemleri gibi konularda kişiye özel planlamalar yapılır. İlerleyen yaşlarda görülebilen iştahsızlık, yeme reddi, obezite veya vitamin/mineral (Demir, D vitamini, B12) eksikliklerinde bilimsel ve uygulanabilir beslenme danışmanlığı verilir.',
-    iconPaths: ['M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z']
+    iconPaths: ['M12 2a7 7 0 0 1 7 7c0 5-7 13-7 13S5 14 5 9a7 7 0 0 1 7-7z'],
+    iconCircles: [{ cx: 12, cy: 9, r: 2.5 }]
   },
   {
     title: 'Ateşli Hastalıklar',
@@ -33,7 +35,7 @@ export const services = [
     title: 'Alerji ve Astım',
     desc: 'Çocukluk çağı alerjileri, atopik dermatit, besin alerjileri ve astım tanı ve tedavisinde güncel yaklaşımlarla hizmet veriyoruz.',
     details: 'Günümüzde çocuklarda çevresel faktörler ve genetik yatkınlık nedeniyle alerjik hastalıkların sıklığı giderek artmaktadır. Kliniğimizde inek sütü alerjisi başta olmak üzere besin alerjileri, atopik dermatit (egzama), alerjik rinit (saman nezlesi) ve çocukluk çağı astımının erken tanı ve takibi yapılmaktadır. Alerji belirtisi gösteren (tekrarlayan hırıltı, geçmeyen öksürük, cilt döküntüleri, mukuslu kaka) çocuklarda, gerekli durumlarda diyet düzenlemeleri ve koruyucu ilaç tedavileri planlanır. Çocuğun yaşam kalitesini artıracak çevresel önlemler ve ev içi düzenlemeler konusunda ailelere rehberlik edilir.',
-    iconPaths: ['M6.081 20C2.651 17.592 4.635 13.401 6.86 10.78A21 21 0 0 1 9.5 8.5', 'M17.92 20c3.43-2.408 1.446-6.599-.779-9.22A21 21 0 0 0 14.5 8.5', 'M12 17a1 1 0 1 0 0 2 1 1 0 0 0 0-2z']
+    iconPaths: ['M6.081 20C2.651 17.592 4.635 13.401 6.86 10.78A21 21 0 0 1 9.5 8.5', 'M17.92 20c3.43-2.408 1.446-6.599-.779-9.22A21 21 0 0 0 14.5 8.5', 'M12 2v8', 'M12 17a1 1 0 1 0 0 2 1 1 0 0 0 0-2z']
   }
 ];
 
@@ -45,6 +47,7 @@ export const diseases = [
   'Büyüme ve Gelişme Geriliği',
   'Yenidoğan Sarılığı',
   'İdrar Yolu Enfeksiyonları',
+  'Ateşli Hastalıklar',
   'Döküntülü Hastalıklar',
   'Mide ve Bağırsak Enfeksiyonları',
   'Beslenme Bozuklukları',
@@ -54,6 +57,7 @@ export const diseases = [
   'Çocukluk Çağı Kan Hastalıkları',
   'Kabızlık ve Karın Ağrısı',
   'İnek Sütü Alerjisi',
+  'Kabakulak',
   'İsilik',
   'İdrar Kaçırma (Enürezis)',
   'Çocuklarda Baş Ağrısı',
@@ -61,11 +65,11 @@ export const diseases = [
 ];
 
 export const procedures = [
-  { icon: '🩺', title: 'Yenidoğan İşitme Taraması', desc: 'Bebeklerde işitme kaybının erken tespiti için altın standart.' },
-  { icon: '💡', title: 'Fototerapi', desc: 'Yenidoğan sarılığının güvenli ve etkili ışık tedavisi.' },
+  { icon: '🦻', title: 'Yenidoğan İşitme Taraması', desc: 'Bebeklerde işitme kaybının erken tespiti için altın standart.' },
+  { icon: '☀️', title: 'Fototerapi', desc: 'Yenidoğan sarılığının güvenli ve etkili ışık tedavisi.' },
   { icon: '🩸', title: 'Tam Kan Sayımı (Hemogram)', desc: 'Klinikte hızlı ve güvenilir kan değeri ölçümü.' },
   { icon: '💉', title: 'Tüberkülin Deri Testi (PPD)', desc: 'Verem (tüberküloz) hastalığı taraması ve teşhisi.' },
-  { icon: '📈', title: 'Çocuk Gelişim Testleri', desc: 'Motor, zihinsel ve sosyal gelişimin objektif değerlendirmesi.' },
-  { icon: '👶', title: 'Apgar Skoru Değerlendirmesi', desc: 'Yenidoğan bebeklerin ilk sağlık durumunun anlık kontrolü.' },
-  { icon: '🧠', title: 'Gelişimsel Bozukluk Taraması', desc: 'Gelişimsel bozuklukların erken tanısı ve yönlendirmesi.' }
+  { icon: '🧩', title: 'Çocuk Gelişim Testleri', desc: 'Motor, zihinsel ve sosyal gelişimin objektif değerlendirmesi.' },
+  { icon: '🩺', title: 'Apgar Skoru Değerlendirmesi', desc: 'Yenidoğan bebeklerin ilk sağlık durumunun anlık kontrolü.' },
+  { icon: '📋', title: 'Gelişimsel Bozukluk Taraması', desc: 'Gelişimsel bozuklukların erken tanısı ve yönlendirmesi.' }
 ];

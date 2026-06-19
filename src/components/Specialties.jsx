@@ -7,7 +7,7 @@ export default function Specialties() {
   const rProcedures = useReveal();
 
   return (
-    <section id="bilgi" className="specialties">
+    <section id="uzmanliklar" className="specialties">
       <div className="container">
         <div ref={rHeader} className="specialties__header reveal-up">
           <span className="section-tag">Uzmanlık ve İşlemler</span>

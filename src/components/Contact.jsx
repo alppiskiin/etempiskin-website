@@ -66,8 +66,10 @@ export default function Contact() {
                     title="Muayenehane Konumu"
                     src="https://maps.google.com/maps?q=Ac%C4%B1l%C4%B1k+Caddesi+Kont+%C4%B0%C5%9Fhan%C4%B1+Zonguldak&t=&z=16&ie=UTF8&iwloc=&output=embed"
                     width="100%"
-                    height="220"
+                    height="250"
+                    allowFullScreen
                     loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
                   />
                 </div>
               </div>
@@ -77,7 +79,7 @@ export default function Contact() {
               <div className="contact-card__icon">📞</div>
               <div className="contact-card__content">
                 <h4>Telefon</h4>
-                <a href="tel:+905387850878" className="contact-card__phone">0538 785 08 78</a>
+                <a href="tel:+908508118176" className="contact-card__phone">0850 811 81 76</a>
               </div>
             </div>
 
@@ -105,7 +107,7 @@ export default function Contact() {
             </div>
 
             <div className="contact-card">
-              <div className="contact-card__icon">✨</div>
+              <div className="contact-card__icon">📶</div>
               <div className="contact-card__content">
                 <h4>Muayenehane Olanakları</h4>
                 <div className="contact-card__tags">
@@ -121,7 +123,7 @@ export default function Contact() {
               <h3 className="contact-form__title">Bize Mesaj Gönderin</h3>
               <p className="contact-form__desc">Sorularınızı bize iletin, en kısa sürede size dönüş yapalım.</p>
 
-              {status && <div className="contact-alert contact-alert--success"><span>✓</span> {status.msg}</div>}
+              {status && <div className="contact-alert contact-alert--success"><span>✅</span> {status.msg}</div>}
               {errMsg && <div className="contact-alert contact-alert--error"><span>❌</span> {errMsg}</div>}
 
               <div className="form-group">
@@ -134,7 +136,7 @@ export default function Contact() {
               </div>
               <div className="form-group">
                 <label>Mesajınız</label>
-                <textarea required rows="5" placeholder="Sorunuzu veya mesajınızı yazın..." value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
+                <textarea required rows="4" placeholder="Sorunuzu veya mesajınızı yazın..." value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
               </div>
               <input type="text" tabIndex="-1" autoComplete="off" value={form.website} onChange={(e) => setForm({ ...form, website: e.target.value })} style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }} aria-hidden="true" />
 

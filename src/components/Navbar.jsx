@@ -16,7 +16,7 @@ export default function Navbar() {
 
   useEffect(() => {
     if (location.pathname !== '/') return;
-    const ids = ['hero', 'hakkimda', 'hizmetler', 'bilgi', 'iletisim'];
+    const ids = ['hero', 'hakkimda', 'hizmetler', 'sss', 'iletisim'];
     const obs = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
@@ -52,16 +52,16 @@ export default function Navbar() {
             <a href={link('hero')} className={`navbar__link ${active === 'hero' ? 'active' : ''}`} onClick={close}>Ana Sayfa</a>
             <a href={link('hakkimda')} className={`navbar__link ${active === 'hakkimda' ? 'active' : ''}`} onClick={close}>Hakkımda</a>
             <a href={link('hizmetler')} className={`navbar__link ${active === 'hizmetler' ? 'active' : ''}`} onClick={close}>Hizmetler</a>
-            <a href={link('bilgi')} className={`navbar__link ${active === 'bilgi' ? 'active' : ''}`} onClick={close}>Bilgi Köşesi</a>
+            <a href={link('sss')} className={`navbar__link ${active === 'sss' ? 'active' : ''}`} onClick={close}>Bilgi Köşesi</a>
             <a href={link('iletisim')} className={`navbar__link ${active === 'iletisim' ? 'active' : ''}`} onClick={close}>İletişim</a>
           </div>
 
           <div className="navbar__actions">
-            <a href="tel:+905387850878" className="btn btn--outline btn--sm navbar__cta-phone">
+            <a href="tel:+908508118176" className="btn btn--outline btn--sm navbar__cta-phone" aria-label="Bizi Arayın">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
               </svg>
-              Bizi Arayın
+              <span>Ara</span>
             </a>
             <a href={link('randevu')} className="btn btn--primary btn--sm navbar__cta">Randevu Al</a>
           </div>

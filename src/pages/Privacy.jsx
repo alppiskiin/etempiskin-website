@@ -83,7 +83,7 @@ export default function Privacy() {
             <section>
               <h2>7. İletişim</h2>
               <p>
-                Yukarıdaki haklarınıza ilişkin taleplerinizi <a href="tel:+905387850878">0538 785 08 78</a> numaralı
+                Yukarıdaki haklarınıza ilişkin taleplerinizi <a href="tel:+908508118176">0850 811 81 76</a> numaralı
                 telefondan veya Muayenehane Adresi (Acılık Caddesi, Kont İşhanı No:11/6, 67030 Zonguldak Merkez)
                 üzerinden iletebilirsiniz.
               </p>

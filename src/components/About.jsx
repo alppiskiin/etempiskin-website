@@ -9,9 +9,9 @@ export default function About() {
       <div className="container about__inner">
         <div ref={rImage} className="about__image reveal-right">
           <div className="about__image-card">
-            <img src="/assets/about.jpeg" alt="Prof. Dr. İbrahim Etem Pişkin" />
+            <img src="/assets/about.jpeg" alt="Prof. Dr. İbrahim Etem Pişkin" loading="lazy" style={{ width: '100%', display: 'block', objectFit: 'cover', aspectRatio: '3/4' }} />
+            <div className="about__image-decoration"></div>
           </div>
-          <div className="about__image-decoration"></div>
           <div className="about__exp-card">
             <span className="about__exp-number">25+</span>
             <span className="about__exp-text">Yıl Deneyim</span>

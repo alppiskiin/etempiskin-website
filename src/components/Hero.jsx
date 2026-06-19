@@ -15,21 +15,35 @@ export default function Hero() {
             Zonguldak'ın Güvenilir Çocuk Doktoru
           </div>
           <h1 className="hero__title">
-            Çocuğunuzun <span className="text-gradient">Sağlığı</span> Önceliğimiz
+            Çocuğunuzun <span className="text-gradient">Sağlığı</span>,<br />
+            Bizim <span className="text-gradient">Önceliğimiz</span>
           </h1>
           <p className="hero__subtitle">
             Sevgi, güven ve güncel tıp yaklaşımlarıyla çocuklarınızın yanındayız. Her muayene, her kontrol, her an — çocuğunuz için en iyisi.
           </p>
           <div className="hero__buttons">
-            <a href="#randevu" className="btn btn--primary btn--lg">Randevu Al</a>
-            <a href="#hakkimda" className="btn btn--outline btn--lg">Hakkımda</a>
+            <a href="#randevu" className="btn btn--primary btn--lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
+              Randevu Al
+            </a>
+            <a href="tel:+908508118176" className="btn btn--outline btn--lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+              </svg>
+              Bizi Arayın
+            </a>
           </div>
         </div>
 
         <div ref={rImage} className="hero__image reveal-left">
           <div className="hero__image-wrapper">
+            <img src="/assets/hero.jpeg" alt="Prof. Dr. İbrahim Etem Pişkin" loading="eager" style={{ width: '100%', height: 'auto', borderRadius: '16px' }} />
             <div className="hero__image-glow"></div>
-            <img src="/assets/hero.jpeg" alt="Prof. Dr. İbrahim Etem Pişkin" />
           </div>
         </div>
       </div>
@@ -41,16 +55,16 @@ export default function Hero() {
             <div className="trust-badge__text"><strong>Profesör Doktor</strong><span>Çocuk Sağlığı Uzmanı</span></div>
           </div>
           <div className="trust-badge">
-            <div className="trust-badge__icon">⏳</div>
+            <div className="trust-badge__icon">⭐</div>
             <div className="trust-badge__text"><strong>25+ Yıl</strong><span>Mesleki Deneyim</span></div>
           </div>
           <div className="trust-badge">
-            <div className="trust-badge__icon">👶</div>
-            <div className="trust-badge__text"><strong>Mutlu Aile</strong><span>Çocuk Dostu</span></div>
+            <div className="trust-badge__icon">👨‍👩‍👧‍👦</div>
+            <div className="trust-badge__text"><strong>Binlerce</strong><span>Mutlu Aile</span></div>
           </div>
           <div className="trust-badge">
             <div className="trust-badge__icon">🏥</div>
-            <div className="trust-badge__text"><strong>Muayenehane</strong><span>Zonguldak Merkez</span></div>
+            <div className="trust-badge__text"><strong>Çocuk Dostu</strong><span>Muayenehane</span></div>
           </div>
         </div>
       </div>

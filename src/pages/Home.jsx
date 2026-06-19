@@ -28,17 +28,54 @@ export default function Home() {
       <Helmet>
         <title>Prof. Dr. İbrahim Etem Pişkin | Çocuk Sağlığı ve Hastalıkları Uzmanı</title>
         <meta name="description" content="Zonguldak'ta çocuk sağlığı ve hastalıkları uzmanı. Randevu için hemen arayın." />
+        <script type="application/ld+json">{JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Physician',
+          name: 'Prof. Dr. İbrahim Etem Pişkin',
+          description: "Zonguldak'ta çocuk sağlığı ve hastalıkları uzmanı olarak hizmet veren Prof. Dr. İbrahim Etem Pişkin.",
+          medicalSpecialty: 'Pediatrics',
+          telephone: '+908508118176',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Acılık Caddesi, Kont İşhanı No:11/6',
+            addressLocality: 'Zonguldak',
+            postalCode: '67030',
+            addressCountry: 'TR'
+          },
+          openingHoursSpecification: [
+            {
+              '@type': 'OpeningHoursSpecification',
+              dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+              opens: '09:00',
+              closes: '17:00'
+            },
+            {
+              '@type': 'OpeningHoursSpecification',
+              dayOfWeek: 'Saturday',
+              opens: '09:00',
+              closes: '13:00'
+            }
+          ],
+          aggregateRating: {
+            '@type': 'AggregateRating',
+            ratingValue: '5.0',
+            reviewCount: '519',
+            bestRating: '5'
+          },
+          priceRange: '$$'
+        })}</script>
       </Helmet>
       <Navbar />
       <main>
         <Hero />
-        <About />
+        <Reviews isMarqueeOnly />
+        <Booking />
         <Services />
         <Specialties />
-        <Booking />
-        <Reviews />
+        <About />
         <FAQ />
         <Contact />
+        <Reviews />
       </main>
       <Footer />
       <WhatsAppFAB />

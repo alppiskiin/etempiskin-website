@@ -35,8 +35,9 @@ export default function FAQ() {
   const rList = useReveal();
 
   return (
-    <section className="faq">
-      <div className="container faq__inner">
+    <section className="faq" id="sss">
+      <div className="container">
+        <div className="faq__inner">
         <div ref={rHeader} className="faq__header reveal-right">
           <span className="section-tag">Sık Sorulan Sorular</span>
           <h2 className="section-title">Ebeveyn Bilgi Köşesi</h2>
@@ -69,6 +70,7 @@ export default function FAQ() {
               </div>
             </div>
           ))}
+        </div>
         </div>
       </div>
     </section>

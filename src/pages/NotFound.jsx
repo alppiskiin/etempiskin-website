@@ -16,7 +16,7 @@ export default function NotFound() {
         </p>
         <div className="not-found__actions">
           <Link to="/" className="btn btn--primary btn--lg">Ana Sayfaya Dön</Link>
-          <a href="tel:+905387850878" className="btn btn--outline btn--lg">Bizi Arayın</a>
+          <a href="tel:+908508118176" className="btn btn--outline btn--lg">Bizi Arayın</a>
         </div>
       </div>
     </>
