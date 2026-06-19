@@ -22,7 +22,13 @@ export default function Footer() {
           <div className="footer__links">
             <h4>Hızlı Erişim</h4>
             <ul>
-              <li><a href="#hero">Ana Sayfa</a></li>
+              <li><a href="#hero" onClick={(e) => {
+                if (window.location.pathname === '/') {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                  history.replaceState(null, '', window.location.pathname + window.location.search);
+                }
+              }}>Ana Sayfa</a></li>
               <li><a href="#hakkimda">Hakkımda</a></li>
               <li><a href="#hizmetler">Hizmetler</a></li>
               <li><a href="#sss">Bilgi Köşesi</a></li>
