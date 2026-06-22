@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import useReveal from '../hooks/useReveal.js';
 import { supabase } from '../lib/supabase.js';
 import { sendAppointmentEmail } from '../lib/emailjs.js';
+import { getBookingEnabled } from '../lib/settings.js';
 
 const WEEKDAY_TIMES = ['09:00', '09:30', '10:00', '10:30', '11:00', '13:30', '14:00', '15:00', '16:00'];
 const SATURDAY_TIMES = ['09:00', '09:30', '10:00', '10:30', '11:00', '11:30', '12:00', '12:30'];
@@ -27,7 +28,14 @@ export default function Booking() {
   const [step, setStep] = useState(1);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [bookingEnabled, setBookingEnabledState] = useState(null);
   const [data, setData] = useState({ date: '', time: '', parentName: '', childName: '', phone: '', reason: '', company: '' });
+
+  useEffect(() => {
+    let active = true;
+    getBookingEnabled().then((v) => { if (active) setBookingEnabledState(v); });
+    return () => { active = false; };
+  }, []);
 
   const handleChange = (e) => setData({ ...data, [e.target.name]: e.target.value });
 
@@ -100,7 +108,21 @@ export default function Booking() {
           </div>
 
           <div className="booking-form-card">
-            {submitted ? (
+            {bookingEnabled === null ? (
+              <div className="booking-success">
+                <p style={{ color: 'var(--text-light)' }}>Yükleniyor...</p>
+              </div>
+            ) : bookingEnabled === false ? (
+              <div className="booking-success">
+                <div className="success-icon" style={{ background: 'var(--warning)' }}>🗓️</div>
+                <h3>Online Randevu Geçici Olarak Kapalı</h3>
+                <p>Doktorumuz şu anda online randevu kabul etmemektedir. Bilgi ve randevu için lütfen doğrudan telefonla bize ulaşın.</p>
+                <div style={{ display: 'flex', gap: '.75rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1.5rem' }}>
+                  <a href="tel:+908508118176" className="btn btn--primary">📞 0850 811 81 76</a>
+                  <a href="https://wa.me/905469151000?text=Merhaba%2C%20randevu%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" className="btn btn--outline">💬 WhatsApp</a>
+                </div>
+              </div>
+            ) : submitted ? (
               <div className="booking-success">
                 <div className="success-icon">✓</div>
                 <h3>Randevu Talebiniz Alındı!</h3>

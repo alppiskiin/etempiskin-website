@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { supabase } from '../lib/supabase.js';
 import AdminBookings from './AdminBookings.jsx';
 import AdminReviews from './AdminReviews.jsx';
+import AdminSettings from './AdminSettings.jsx';
 
 export default function AdminDashboard({ session }) {
   const [tab, setTab] = useState('bookings');
@@ -47,11 +48,15 @@ export default function AdminDashboard({ session }) {
         <button onClick={() => setTab('reviews')} style={tabStyle(tab === 'reviews')}>
           💬 Yorumlar
         </button>
+        <button onClick={() => setTab('settings')} style={tabStyle(tab === 'settings')}>
+          ⚙️ Ayarlar
+        </button>
       </nav>
 
       <main style={{ padding: '2rem', maxWidth: '1100px', margin: '0 auto' }}>
         {tab === 'bookings' && <AdminBookings />}
         {tab === 'reviews' && <AdminReviews />}
+        {tab === 'settings' && <AdminSettings />}
       </main>
     </div>
   );
