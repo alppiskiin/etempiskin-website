@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Check, Trash2 } from 'lucide-react';
 import { supabase } from '../lib/supabase.js';
 
 export default function AdminReviews() {
@@ -117,11 +118,11 @@ export default function AdminReviews() {
                   </button>
                 ) : (
                   <button className="btn btn--primary btn--sm" onClick={() => approve(r.id)}>
-                    ✅ Onayla
+                    <Check size={15} /> Onayla
                   </button>
                 )}
                 <button className="btn btn--sm" style={{ background: '#FEE2E2', color: '#DC2626', border: 'none' }} onClick={() => remove(r.id)}>
-                  🗑️ Sil
+                  <Trash2 size={15} /> Sil
                 </button>
               </div>
             </div>

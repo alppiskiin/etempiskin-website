@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Clock, BellRing, ShieldCheck, CalendarX, Phone, MessageCircle, Check } from 'lucide-react';
 import useReveal from '../hooks/useReveal.js';
 import { supabase } from '../lib/supabase.js';
 import { sendAppointmentEmail } from '../lib/emailjs.js';
@@ -101,9 +102,9 @@ export default function Booking() {
               Doktorsitesi benzeri randevu sistemimizle beklemeden randevunuzu oluşturun. Talebiniz doktorumuza ulaştığında size geri dönüş sağlanarak randevunuz kesinleştirilecektir.
             </p>
             <div className="booking-features">
-              <div className="feature"><span className="icon">⏱️</span> Hızlı ve Kolay</div>
-              <div className="feature"><span className="icon">📱</span> Anında Bildirim</div>
-              <div className="feature"><span className="icon">🛡️</span> Güvenli Altyapı</div>
+              <div className="feature"><span className="icon" style={{ display: 'inline-flex', color: 'var(--primary)' }}><Clock size={20} /></span> Hızlı ve Kolay</div>
+              <div className="feature"><span className="icon" style={{ display: 'inline-flex', color: 'var(--primary)' }}><BellRing size={20} /></span> Anında Bildirim</div>
+              <div className="feature"><span className="icon" style={{ display: 'inline-flex', color: 'var(--primary)' }}><ShieldCheck size={20} /></span> Güvenli Altyapı</div>
             </div>
           </div>
 
@@ -114,17 +115,17 @@ export default function Booking() {
               </div>
             ) : bookingEnabled === false ? (
               <div className="booking-success">
-                <div className="success-icon" style={{ background: 'var(--warning)' }}>🗓️</div>
+                <div className="success-icon" style={{ background: 'var(--warning)' }}><CalendarX size={38} /></div>
                 <h3>Online Randevu Geçici Olarak Kapalı</h3>
                 <p>Doktorumuz şu anda online randevu kabul etmemektedir. Bilgi ve randevu için lütfen doğrudan telefonla bize ulaşın.</p>
                 <div style={{ display: 'flex', gap: '.75rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1.5rem' }}>
-                  <a href="tel:+908508118176" className="btn btn--primary">📞 0850 811 81 76</a>
-                  <a href="https://wa.me/905469151000?text=Merhaba%2C%20randevu%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" className="btn btn--outline">💬 WhatsApp</a>
+                  <a href="tel:+908508118176" className="btn btn--primary"><Phone size={18} /> 0850 811 81 76</a>
+                  <a href="https://wa.me/905469151000?text=Merhaba%2C%20randevu%20almak%20istiyorum." target="_blank" rel="noopener noreferrer" className="btn btn--outline"><MessageCircle size={18} /> WhatsApp</a>
                 </div>
               </div>
             ) : submitted ? (
               <div className="booking-success">
-                <div className="success-icon">✓</div>
+                <div className="success-icon"><Check size={40} /></div>
                 <h3>Randevu Talebiniz Alındı!</h3>
                 <p><strong>{data.parentName}</strong>, randevu talebiniz başarıyla iletildi.</p>
                 <p>

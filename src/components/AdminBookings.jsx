@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Calendar, Clock, Phone, FileText, Check, X, Trash2 } from 'lucide-react';
 import { supabase } from '../lib/supabase.js';
 import { sendAppointmentEmail } from '../lib/emailjs.js';
 
@@ -128,23 +129,23 @@ export default function AdminBookings() {
                   </span>
                 </div>
                 <div style={{ fontSize: '.9rem', color: 'var(--text)', display: 'grid', gap: '.25rem', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', marginBottom: '1rem' }}>
-                  <div>📅 <strong>{e.appointment_date}</strong> · 🕐 {e.appointment_time}</div>
-                  <div>📞 <a href={`tel:${e.phone}`}>{e.phone}</a></div>
-                  {e.reason && <div style={{ gridColumn: '1 / -1' }}>📝 {e.reason}</div>}
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '.4rem' }}><Calendar size={15} /> <strong>{e.appointment_date}</strong> · <Clock size={15} /> {e.appointment_time}</div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '.4rem' }}><Phone size={15} /> <a href={`tel:${e.phone}`}>{e.phone}</a></div>
+                  {e.reason && <div style={{ gridColumn: '1 / -1', display: 'flex', alignItems: 'flex-start', gap: '.4rem' }}><FileText size={15} style={{ flexShrink: 0, marginTop: '2px' }} /> {e.reason}</div>}
                 </div>
                 <div style={{ display: 'flex', gap: '.5rem', flexWrap: 'wrap' }}>
                   {e.status !== 'approved' && (
                     <button className="btn btn--primary btn--sm" onClick={() => updateStatus(e, 'approved')}>
-                      ✅ Onayla
+                      <Check size={15} /> Onayla
                     </button>
                   )}
                   {e.status !== 'rejected' && (
                     <button className="btn btn--sm" style={{ background: '#FEE2E2', color: '#DC2626', border: 'none' }} onClick={() => updateStatus(e, 'rejected')}>
-                      ❌ Reddet
+                      <X size={15} /> Reddet
                     </button>
                   )}
                   <button className="btn btn--sm" style={{ background: 'transparent', color: 'var(--text-light)', border: '1px solid var(--border)' }} onClick={() => remove(e)}>
-                    🗑️ Sil
+                    <Trash2 size={15} /> Sil
                   </button>
                 </div>
               </div>

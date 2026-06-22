@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { MapPin, Phone, Clock, CreditCard, Wifi, CheckCircle2, XCircle } from 'lucide-react';
 import useReveal from '../hooks/useReveal.js';
 import { sendAppointmentEmail } from '../lib/emailjs.js';
 
@@ -55,7 +56,7 @@ export default function Contact() {
         <div className="contact__inner">
           <div ref={rInfo} className="contact__info reveal-right">
             <div className="contact-card">
-              <div className="contact-card__icon">📍</div>
+              <div className="contact-card__icon" style={{ color: 'var(--primary)', display: 'flex' }}><MapPin size={24} /></div>
               <div className="contact-card__content">
                 <h4>Muayenehane Adresi</h4>
                 <p className="contact-card__address">Acılık Caddesi, Kont İşhanı No:11/6, 67030 Zonguldak Merkez</p>
@@ -76,7 +77,7 @@ export default function Contact() {
             </div>
 
             <div className="contact-card">
-              <div className="contact-card__icon">📞</div>
+              <div className="contact-card__icon" style={{ color: 'var(--primary)', display: 'flex' }}><Phone size={24} /></div>
               <div className="contact-card__content">
                 <h4>Telefon</h4>
                 <a href="tel:+908508118176" className="contact-card__phone">0850 811 81 76</a>
@@ -84,7 +85,7 @@ export default function Contact() {
             </div>
 
             <div className="contact-card">
-              <div className="contact-card__icon">🕐</div>
+              <div className="contact-card__icon" style={{ color: 'var(--primary)', display: 'flex' }}><Clock size={24} /></div>
               <div className="contact-card__content">
                 <h4>Çalışma Saatleri</h4>
                 <div className="hours-table">
@@ -96,7 +97,7 @@ export default function Contact() {
             </div>
 
             <div className="contact-card">
-              <div className="contact-card__icon">💳</div>
+              <div className="contact-card__icon" style={{ color: 'var(--primary)', display: 'flex' }}><CreditCard size={24} /></div>
               <div className="contact-card__content">
                 <h4>Ödeme Yöntemleri</h4>
                 <div className="contact-card__tags">
@@ -107,7 +108,7 @@ export default function Contact() {
             </div>
 
             <div className="contact-card">
-              <div className="contact-card__icon">📶</div>
+              <div className="contact-card__icon" style={{ color: 'var(--primary)', display: 'flex' }}><Wifi size={24} /></div>
               <div className="contact-card__content">
                 <h4>Muayenehane Olanakları</h4>
                 <div className="contact-card__tags">
@@ -123,8 +124,8 @@ export default function Contact() {
               <h3 className="contact-form__title">Bize Mesaj Gönderin</h3>
               <p className="contact-form__desc">Sorularınızı bize iletin, en kısa sürede size dönüş yapalım.</p>
 
-              {status && <div className="contact-alert contact-alert--success"><span>✅</span> {status.msg}</div>}
-              {errMsg && <div className="contact-alert contact-alert--error"><span>❌</span> {errMsg}</div>}
+              {status && <div className="contact-alert contact-alert--success"><CheckCircle2 size={18} /> {status.msg}</div>}
+              {errMsg && <div className="contact-alert contact-alert--error"><XCircle size={18} /> {errMsg}</div>}
 
               <div className="form-group">
                 <label>Adınız Soyadınız</label>

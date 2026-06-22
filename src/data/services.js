@@ -64,12 +64,14 @@ export const diseases = [
   'İshal ve Dehidratasyon'
 ];
 
+import { Ear, Sun, Droplet, Syringe, Puzzle, Activity, ClipboardList } from 'lucide-react';
+
 export const procedures = [
-  { icon: '🦻', title: 'Yenidoğan İşitme Taraması', desc: 'Bebeklerde işitme kaybının erken tespiti için altın standart.' },
-  { icon: '☀️', title: 'Fototerapi', desc: 'Yenidoğan sarılığının güvenli ve etkili ışık tedavisi.' },
-  { icon: '🩸', title: 'Tam Kan Sayımı (Hemogram)', desc: 'Klinikte hızlı ve güvenilir kan değeri ölçümü.' },
-  { icon: '💉', title: 'Tüberkülin Deri Testi (PPD)', desc: 'Verem (tüberküloz) hastalığı taraması ve teşhisi.' },
-  { icon: '🧩', title: 'Çocuk Gelişim Testleri', desc: 'Motor, zihinsel ve sosyal gelişimin objektif değerlendirmesi.' },
-  { icon: '🩺', title: 'Apgar Skoru Değerlendirmesi', desc: 'Yenidoğan bebeklerin ilk sağlık durumunun anlık kontrolü.' },
-  { icon: '📋', title: 'Gelişimsel Bozukluk Taraması', desc: 'Gelişimsel bozuklukların erken tanısı ve yönlendirmesi.' }
+  { icon: Ear, title: 'Yenidoğan İşitme Taraması', desc: 'Bebeklerde işitme kaybının erken tespiti için altın standart.' },
+  { icon: Sun, title: 'Fototerapi', desc: 'Yenidoğan sarılığının güvenli ve etkili ışık tedavisi.' },
+  { icon: Droplet, title: 'Tam Kan Sayımı (Hemogram)', desc: 'Klinikte hızlı ve güvenilir kan değeri ölçümü.' },
+  { icon: Syringe, title: 'Tüberkülin Deri Testi (PPD)', desc: 'Verem (tüberküloz) hastalığı taraması ve teşhisi.' },
+  { icon: Puzzle, title: 'Çocuk Gelişim Testleri', desc: 'Motor, zihinsel ve sosyal gelişimin objektif değerlendirmesi.' },
+  { icon: Activity, title: 'Apgar Skoru Değerlendirmesi', desc: 'Yenidoğan bebeklerin ilk sağlık durumunun anlık kontrolü.' },
+  { icon: ClipboardList, title: 'Gelişimsel Bozukluk Taraması', desc: 'Gelişimsel bozuklukların erken tanısı ve yönlendirmesi.' }
 ];

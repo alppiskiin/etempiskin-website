@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Calendar, MessageSquare, Settings } from 'lucide-react';
 import { supabase } from '../lib/supabase.js';
 import AdminBookings from './AdminBookings.jsx';
 import AdminReviews from './AdminReviews.jsx';
@@ -43,13 +44,13 @@ export default function AdminDashboard({ session }) {
         gap: '.5rem'
       }}>
         <button onClick={() => setTab('bookings')} style={tabStyle(tab === 'bookings')}>
-          📅 Randevular
+          <Calendar size={16} /> Randevular
         </button>
         <button onClick={() => setTab('reviews')} style={tabStyle(tab === 'reviews')}>
-          💬 Yorumlar
+          <MessageSquare size={16} /> Yorumlar
         </button>
         <button onClick={() => setTab('settings')} style={tabStyle(tab === 'settings')}>
-          ⚙️ Ayarlar
+          <Settings size={16} /> Ayarlar
         </button>
       </nav>
 
@@ -72,6 +73,9 @@ function tabStyle(active) {
     border: 'none',
     borderBottom: active ? '3px solid var(--primary)' : '3px solid transparent',
     color: active ? 'var(--primary)' : 'var(--text-light)',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: '.5rem'
   };
 }

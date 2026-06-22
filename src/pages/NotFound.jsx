@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { Baby } from 'lucide-react';
 
 export default function NotFound() {
   return (
@@ -8,7 +9,7 @@ export default function NotFound() {
         <title>Sayfa Bulunamadı | Prof. Dr. İbrahim Etem Pişkin</title>
       </Helmet>
       <div className="not-found">
-        <div className="not-found__icon">👶</div>
+        <div className="not-found__icon" style={{ color: 'var(--primary)', display: 'flex', justifyContent: 'center' }}><Baby size={64} /></div>
         <div className="not-found__code">404</div>
         <h1 className="not-found__title">Sayfa Bulunamadı</h1>
         <p className="not-found__desc">

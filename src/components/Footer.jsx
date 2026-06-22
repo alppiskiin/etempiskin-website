@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Stethoscope, MapPin, Phone, MessageCircle, AlertTriangle } from 'lucide-react';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -8,7 +9,7 @@ export default function Footer() {
         <div className="footer__inner">
           <div className="footer__brand">
             <div className="footer__logo">
-              <span className="footer__logo-icon">🩺</span>
+              <span className="footer__logo-icon" style={{ color: 'var(--primary-light)', display: 'flex' }}><Stethoscope size={28} /></span>
               <div>
                 <strong>Prof. Dr. İbrahim Etem Pişkin</strong>
                 <span>Çocuk Sağlığı ve Hastalıkları Uzmanı</span>
@@ -49,9 +50,9 @@ export default function Footer() {
 
           <div className="footer__contact">
             <h4>İletişim</h4>
-            <p>📍 <a href="https://maps.app.goo.gl/ar7Ku4UyF3Zojt2Z9" target="_blank" rel="noopener noreferrer">Zonguldak Merkez</a></p>
-            <p>📞 <a href="tel:+908508118176">0850 811 81 76</a></p>
-            <p>💬 <a href="https://wa.me/905469151000" target="_blank" rel="noopener noreferrer">0546 915 10 00</a></p>
+            <p><MapPin size={16} style={{ verticalAlign: '-3px', marginRight: '4px' }} /> <a href="https://maps.app.goo.gl/ar7Ku4UyF3Zojt2Z9" target="_blank" rel="noopener noreferrer">Zonguldak Merkez</a></p>
+            <p><Phone size={16} style={{ verticalAlign: '-3px', marginRight: '4px' }} /> <a href="tel:+908508118176">0850 811 81 76</a></p>
+            <p><MessageCircle size={16} style={{ verticalAlign: '-3px', marginRight: '4px' }} /> <a href="https://wa.me/905469151000" target="_blank" rel="noopener noreferrer">0546 915 10 00</a></p>
           </div>
         </div>
 
@@ -61,7 +62,7 @@ export default function Footer() {
             <Link to="/gizlilik" style={{ color: 'rgba(255,255,255,0.7)' }}>Gizlilik Politikası &amp; KVKK</Link>
           </p>
           <div className="footer__emergency">
-            🚨 <strong>Acil durumlarda 112'yi arayın.</strong> Bu site tıbbi acil yardım hizmeti sunmamaktadır.
+            <AlertTriangle size={16} style={{ verticalAlign: '-3px', marginRight: '4px' }} /> <strong>Acil durumlarda 112'yi arayın.</strong> Bu site tıbbi acil yardım hizmeti sunmamaktadır.
           </div>
         </div>
       </div>

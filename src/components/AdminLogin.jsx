@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Stethoscope } from 'lucide-react';
 import { supabase } from '../lib/supabase.js';
 
 export default function AdminLogin() {
@@ -20,8 +21,8 @@ export default function AdminLogin() {
   return (
     <div style={{ background: '#f4f7f6', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem' }}>
       <div style={{ background: '#fff', padding: '3rem', borderRadius: '12px', boxShadow: '0 10px 25px rgba(0,0,0,0.05)', width: '100%', maxWidth: '400px' }}>
-        <h2 style={{ textAlign: 'center', marginBottom: '2rem', fontFamily: 'var(--font-heading)', color: 'var(--text-dark)' }}>
-          👨‍⚕️ Yönetici Girişi
+        <h2 style={{ textAlign: 'center', marginBottom: '2rem', fontFamily: 'var(--font-heading)', color: 'var(--text-dark)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '.5rem' }}>
+          <Stethoscope size={24} style={{ color: 'var(--primary)' }} /> Yönetici Girişi
         </h2>
         <form onSubmit={submit}>
           <div className="form-group">

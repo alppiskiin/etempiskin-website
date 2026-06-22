@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { CheckCircle2, XCircle } from 'lucide-react';
 import useReveal from '../hooks/useReveal.js';
 import { reviews as defaultReviews } from '../data/reviews.js';
 import { supabase } from '../lib/supabase.js';
@@ -161,8 +162,8 @@ export default function Reviews({ isMarqueeOnly }) {
           <div className="reviews-form-card">
             <h3 className="reviews-form-card__title">Siz de Yorumunuzu Bırakın</h3>
             <p className="reviews-form-card__desc">Deneyiminizi bizimle paylaşın. Yorumlarınız doktorumuz tarafından onaylandıktan sonra yayınlanacaktır.</p>
-            {success && <div className="contact-alert contact-alert--success"><span>✅</span> {success}</div>}
-            {error && <div className="contact-alert contact-alert--error"><span>❌</span> {error}</div>}
+            {success && <div className="contact-alert contact-alert--success"><CheckCircle2 size={18} /> {success}</div>}
+            {error && <div className="contact-alert contact-alert--error"><XCircle size={18} /> {error}</div>}
             <form onSubmit={submit}>
               <div style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, overflow: 'hidden' }} aria-hidden="true" tabIndex={-1}>
                 <label htmlFor="review-website">Website</label>

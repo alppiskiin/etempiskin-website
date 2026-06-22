@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { X } from 'lucide-react';
 import useReveal from '../hooks/useReveal.js';
 import { services } from '../data/services.js';
 
@@ -50,7 +51,7 @@ export default function Services() {
       <div className={`modal-overlay ${open !== null ? 'active' : ''}`} onClick={() => setOpen(null)}>
         {open !== null && (
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={() => setOpen(null)} aria-label="Kapat">✕</button>
+            <button className="modal-close" onClick={() => setOpen(null)} aria-label="Kapat"><X size={20} /></button>
             <div className="modal-icon"><ServiceIcon paths={services[open].iconPaths} circles={services[open].iconCircles} /></div>
             <h3 className="modal-title">{services[open].title}</h3>
             <div className="modal-body"><p>{services[open].details}</p></div>

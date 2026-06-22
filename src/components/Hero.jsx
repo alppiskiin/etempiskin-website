@@ -1,3 +1,4 @@
+import { Stethoscope, Award, Users, Baby } from 'lucide-react';
 import useReveal from '../hooks/useReveal.js';
 
 export default function Hero() {
@@ -61,19 +62,19 @@ export default function Hero() {
       <div className="container">
         <div ref={rBadges} className="hero__badges reveal-up">
           <div className="trust-badge">
-            <div className="trust-badge__icon">👨‍⚕️</div>
+            <div className="trust-badge__icon" style={{ color: 'var(--primary)', display: 'flex' }}><Stethoscope size={30} strokeWidth={1.75} /></div>
             <div className="trust-badge__text"><strong>Profesör Doktor</strong><span>Çocuk Sağlığı Uzmanı</span></div>
           </div>
           <div className="trust-badge">
-            <div className="trust-badge__icon">⭐</div>
+            <div className="trust-badge__icon" style={{ color: 'var(--primary)', display: 'flex' }}><Award size={30} strokeWidth={1.75} /></div>
             <div className="trust-badge__text"><strong>25+ Yıl</strong><span>Mesleki Deneyim</span></div>
           </div>
           <div className="trust-badge">
-            <div className="trust-badge__icon">👨‍👩‍👧‍👦</div>
+            <div className="trust-badge__icon" style={{ color: 'var(--primary)', display: 'flex' }}><Users size={30} strokeWidth={1.75} /></div>
             <div className="trust-badge__text"><strong>Binlerce</strong><span>Mutlu Aile</span></div>
           </div>
           <div className="trust-badge">
-            <div className="trust-badge__icon">🏥</div>
+            <div className="trust-badge__icon" style={{ color: 'var(--primary)', display: 'flex' }}><Baby size={30} strokeWidth={1.75} /></div>
             <div className="trust-badge__text"><strong>Çocuk Dostu</strong><span>Muayenehane</span></div>
           </div>
         </div>
